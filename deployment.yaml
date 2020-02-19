@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: timeapp-deployment
+  labels:
+    app: timeapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: timeapp
+  template:
+    metadata:
+      labels:
+        app: timeapp
+    spec:
+      containers:
+          image: docker.io/vaishnavihire/timeapp
+          ports:
+            - containerPort: 8080
+
+path: /
