@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
         - image: docker.io/vaishnavihire/timeapp:updated_time
+          name: timeapp
           ports:
             - containerPort: 8080
-
-path: /
