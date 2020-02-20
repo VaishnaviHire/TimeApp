@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: timeapp-deployment
+  name: windows-starter
   labels:
-    app: timeapp
+    name: timeapp
 spec:
   replicas: 3
   selector:
@@ -15,7 +15,7 @@ spec:
         app: timeapp
     spec:
       containers:
-       - image: docker.io/vaishnavihire/timeapp
+        - image: docker.io/vaishnavihire/timeapp:updated_time
           ports:
             - containerPort: 8080
 
